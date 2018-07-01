@@ -8,6 +8,5 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 })
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
